@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIF of truth</title>
+  <link rel="icon" href="<%=require('./images/favicon.png')%>">
+</head>
+<body class="page">
+  <header class="header">
+    <h1 class="header__title">ГИФКА ПРАВДЫ</h1>
+    <p class="header__description">Задай вопрос получи ответ!</p>
+  </header>
+  <main class="main">
+    <div class="card card_disabled">
+      <p class="card__answer"></p>
+      <img src="" alt="" class="card__image">
+    </div>
+    <div class="question">
+      <h2 class="question__title">ТУТ МОЖНО СПРОСИТЬ ЧТО ХОЧЕШЬ</h2>
+      <form class="question__form" name="ask-question">
+        <textarea type="text" name="question" class="question__input" placeholder="ВОПРОСЫ БУДУТ?" minlength="3" required></textarea>
+        <button type="submit" class="question__button button_disabled" disabled>спросить оракула</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <img src="https://media.tenor.com/H00mKAcTBTEAAAAM/lizard-dance-funny-lizard.gif" alt="туц туц туц" class="footer__img">
+    <p class="footer__author">@Pokatilov</p>
+  </footer>
+</body>
+</html>
