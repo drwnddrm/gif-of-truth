@@ -23,14 +23,16 @@ const onLoading = (name, link) => {
   cardImage.alt = name;
   setTimeout(() => {
     card.classList.add('card_disabled');
-  }, 1500)
+  }, 1800)
 }
 
 const updateCard = (answer, link) => {
-  card.classList.remove('card_disabled');
-  cardAnswer.textContent = answer;
   cardImage.alt = answer;
   cardImage.src = link;
+  setTimeout(() => {
+    cardAnswer.textContent = answer;
+    card.classList.remove('card_disabled');
+  })
 }
 
 formInput.addEventListener('input', (evt) => {
@@ -53,7 +55,7 @@ form.addEventListener('submit', (evt) => {
     onLoading(loadingBar.name, loadingBar.link);
     setTimeout(() => {
       updateCard(data.answer, data.image)
-    }, 2000);
+    }, 2500);
   })
   .catch(err => console.log(`Ошибка ${err}. Запрос не выполнен`));
 })
